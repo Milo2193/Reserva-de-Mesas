@@ -63,6 +63,12 @@ function renderTables() {
             tableDiv.appendChild(reserveButton);
             
             occupiedTablesDiv.appendChild(tableDiv);
+
+            const releaseButton = document.createElement('button');
+releaseButton.className = 'button';
+releaseButton.textContent = 'Liberar';
+releaseButton.onclick = () => releaseTable(table.number);
+tableDiv.appendChild(releaseButton);
         }     
     });  
 }
@@ -245,3 +251,4 @@ function generateReport() {
     reportOutput.textContent = report;
 
 }
+
