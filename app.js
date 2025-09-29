@@ -38,7 +38,7 @@ function renderTables() {
     availableTables.forEach(table => {     
         const tableDiv = document.createElement('div');     
         tableDiv.className = 'table';     
-        tableDiv.innerHTML = `<img src="imagenes/mesas.png" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;       
+        tableDiv.innerHTML = `<img src="mesas.png" alt="Mesa ${table.number}"><div class="table-name">Mesa ${table.number}</div>`;       
 
 
         const tableReservations = reservations.filter(r => r.tableNumber === table.number);
@@ -243,4 +243,5 @@ function generateReport() {
     }
     
     reportOutput.textContent = report;
+
 }
